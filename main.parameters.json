@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "userName": {
+        "value": "tdidevvmadmin"
+      },
+      "password": {
+        "value": "Az@dministrat0r"
+      },
+      "vmName": {
+        "value": "dev-vm"
+      },
+      "vmSize": {
+        "value": "Standard_D4ds_v5"
+      },
+      "nicName": {
+        "value": "dev-vm-nic"
+      },
+      "subnetRef": {
+        "value": "subscriptions/676e5601-aabe-45cf-af4f-f1ec7c47602e/resourceGroups/CommonServices/providers/Microsoft.Network/virtualNetworks/Standalone-CommonServices-vNet/subnets/VMSubnet"
+      },
+      "extName": {
+        "value": "extension"
+      },
+      "customScriptFileUrl": {
+        "value": "https://commonstorageaccountcdn.blob.core.windows.net/commonfiles/VMProvisioning.ps1"
+      },
+      "commandToExecute": {
+        "value": "powershell.exe -ExecutionPolicy Unrestricted -File VMProvisioning.ps1"
+      },
+      "userIdColl": {
+        "value": ["jigk","amarw"]
+      }
+
+    }
+  }
